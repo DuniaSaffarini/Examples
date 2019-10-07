@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+
+<script src="test1.js"></script>
+
+<h2 id="demo">hello 1</h2>
+<p  id="test">My first paragraph.</p>
+<p  id="f1">My first paragraph.</p>
+<p  id="f2">My first paragraph.</p>
+<p  id="f3">My first paragraph.</p>
+<p  id="demo2">My first paragraph.</p>
+
+<p>Never call document.write after the document has finished loading.
+    It will overwrite the whole document.</p>
+<button type="button" onclick="document.getElementById('demo').innerHTML='hello2'">click to change header</button>
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">Click Me!</button>
+
+<button type="button" onclick="changestyle()">changestyle</button>
+
+<button type="button" onclick="validateEmail( )"> validateEmail</button>
+<button id="btn">Click Me!</button>
+
+<p id="demoo"></p>
+
+
+<button type="button" onclick="teststyle()">teststyle</button><br>
+First name:<br>
+<input type="text" id="email" name="fname" placeholder="enter your name"onmouseover="changestyle()"  >
+<p id="demo9"></p>
+
+<p id="demo8"></p>
+<p id="demo10"></p>
+
+<script>
+
+
+  /*  var x= XMLHttpRequest();
+    x.onreadystatechange=function () {
+        if(thix.readyState==4&&this.state==400);
+    }
+
+x.open("GET","https://ar.wikipedia.org/wiki/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9",true);
+    x.send();
+
+
+console.log(this.responseText);
+
+
+*/
+
+
+/*class example{
+
+    constructor(name){
+       this.na=name;
+
+    }
+    static exam(){
+    console.log("this is a static method");
+
+    }
+
+}
+ ex=new example("dunia");
+console.log(ex.name);
+console.log( example.exam());
+*/
+/* multiple actions when response is ready.
+
+
+  <div id="demo">
+      <div id="demo2">
+      <h2>The XMLHttpRequest Object</h2>
+
+  <button type="button" onclick="loadDoc('ajax_info.txt', myFunction2)">Change Content
+  </button>
+  </div>
+
+  <script>
+  function loadDoc(url, cFunction) {
+      var xhttp;
+      xhttp=new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+              cFunction(this);
+          }
+      };
+      xhttp.open("GET", url, true);
+      xhttp.send();
+  }
+  function myFunction(xhttp) {
+      document.getElementById("demo").innerHTML =
+          xhttp.responseText;
+  }
+  function myFunction2(xhttp) {
+      document.getElementById("demo2").innerHTML =
+          "hello";
+  }*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  var obj = { name: "John", age: 30, city: "New York" };
+  var myJSON = JSON.stringify(obj);
+  document.getElementById("demo9").innerHTML = myJSON;
+
+  var obj2 = JSON.parse('{ "name":"John", "age":30, "city":"New York"}');
+
+  document.getElementById("demo8").innerHTML = obj2.name+obj2["city"];
+
+  for (x in myObj) {//proparity
+      document.getElementById("demo10").innerHTML += x + "<br>";
+  }
+
+
+
+
+    var hello;
+
+    hello = function() {
+        document.getElementById("demoo").innerHTML += this;
+    }
+    /*hello = () => {
+
+
+        document.getElementById("demoo").innerHTML += this;
+    }*/
+
+    //The window object calls the function:
+    window.addEventListener("load", hello);
+
+    //A button object calls the function:
+    document.getElementById("btn").addEventListener("click", hello);
+
+
+
+
+    const Pi = 3.14;
+    try {
+      e=5;
+    }
+    catch( e){
+
+        console.log("you can't ");
+    }
+    {
+//let c=5555;
+    }
+//console.log(c);
+  //  "use strict";
+
+
+var sayMyName = function () {
+    console.log('My name is ' + this.name);
+};
+
+var jake = {
+    name: 'Jake'
+}
+
+var sayMyName2 = sayMyName.bind(jake);
+ console.log(sayMyName2()); // 'My name is Jake'
+
+
+var person1 = {
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+}
+var person2 = {
+    firstName:"John",
+    lastName: "Doe",
+}
+person1.fullName.call(person2);// call method explict binding
+
+
+
+
+    function x(p1, p2) {};
+  //  delete x;
+
+    function validateEmail() {
+        var email= document.getElementById("email").value;
+        console.log(email);
+
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+       console.log(re.test(String(email).toLowerCase()));
+
+       return re.test(String(email).toLowerCase());
+    };
+
+
+
+  var testString="Strings&Methods&String#Methods@StringsMethods";
+  var s1=testString.indexOf("Methods");
+  var s2=testString.lastIndexOf("Methods",25);
+
+  var s3=testString.search("hhhh");
+
+  var s4=testString.slice(-15,-9);
+  var s5 = testString.replace(/String/i, "SSSS");
+
+console.log(s1+'<br>'+s2+"<br>"+s3+"<br>"+s4+"<br>"+s5+"<br>"+testString );
+
+
+
+
+var nam=["dunia","Saffarini"];
+ // var na = person.length;
+nam[2]="hello";
+var nn=nam.length;
+  document.getElementById("f3").innerHTML = oo;
+
+ // document.getElementById("f3").innerHTML = na;
+
+ /* // console.log(name.length);
+  text = "";
+  for (i = 0; i < name.length; i++) {
+      text += name[i] + "<br>";
+  }
+*/
+
+
+
+  var person = [];
+  person[0] = "John";
+  person[1] = "Doe";
+  person[2] = 46;
+  var oo = person.length;
+
+
+  //document.getElementById("f3").innerHTML = oo;
+
+
+
+
+  //  console.log(text);
+
+//  document.getElementById("f3").innerHTML = text;
+
+/*var y;
+for(var i=0;i<name.length;i++){
+
+    y+=name[i]+"<br>";
+
+}
+    console.log('hello'+y+'dunia');
+
+
+*/
+
+  var fruits, text, fLen, i;
+  fruits = ["Banana", "Orange", "Apple", "Mango"];
+  fLen = fruits.length;
+
+  text = "<ul>";
+  for (i = 0; i < fLen; i++) {
+      text += "<li>" + fruits[i] + "</li>";
+  }
+  text += "</ul>";
+  fruits.push("lemon");
+  document.getElementById("f2").innerHTML = text;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var va="John";
+    var ob = new String("John");;
+
+console.log((va==ob));
+    console.log( ob.length);
+
+    var myname={
+        fname:"Dunia",
+        lname:'Saffarini',
+        fullname:function () {
+            console.log(this.fname+this.lname);
+        }
+
+
+    };
+
+console.log(myname.fullname());
+
+    console.log(myname.fullname);//return definition
+
+
+
+
+    var r =10;
+    f1();
+    function f1() {
+        var r = 'how r u?'
+        document.getElementById("f1").innerHTML = "GOoOoood morning";
+        console.log(r);
+    }
+    console.log(r);
+  function  changestyle(){
+  ///  document.getElementById("demo").innerHTML = "Hello JavaScript";
+  document.getElementById("demo").style.fontSize = "35px";
+  document.getElementById("demo").style.fontSize = "35px";
+  document.getElementById("test").style.display = "block";
+      document.getElementById("test").style.color = "red";
+
+  }
+  document.getElementById("demo").innerHTML =
+      typeof 0;
+  console.log( typeof function changestyle(){});
+
+  document.getElementById("demo").innerHTML = 1.5;
+  var x = "Volvo" + 16;
+ // window.alert(x);
+  var x=5;
+  document.getElementById('test').innerText= "value ="+x;
+  var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  document.getElementById("test").innerHTML =person.eyeColor;
+  console.log(person);
+  // document.write(5 + 6);
+    /////////////// JS ARRAY METHOD
+
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  document.getElementById("demo2").innerHTML = fruits.join(" * ");
+
+var po = fruits.pop(); //remove element
+
+var pu= fruits.push("test");//  returns the new array length
+  var sh= fruits.shift();//  returns the element was shiffting
+  // unshift add element at begining
+  delete fruits[0];           // Changes the first element in fruits to undefined
+  var sh= fruits.unshift("orange");
+  fruits.sort();
+  fruits.reverse();
+
+  document.getElementById("demo2").innerHTML = fruits;
+
+
+  var numbers = [4, 2, 5, 1, 3];
+  console.log(numbers);
+
+  numbers.sort(function(a, b) {
+
+      return a - b;
+  });
+  console.log(numbers);
+
+
+
+  console.log(Math.max.apply(null, numbers));
+
+  var numbers = [45, 4, 9, 16, 25];
+  var sum = numbers.reduce(myFunction);
+
+  console.log(sum);
+  function myFunction(total, value, index, array) {
+      return total + value;
+  }
+
+
+  var day;
+  switch (new Date().getDay()) {
+      case 0:
+          day = "Sunday";
+          console.log(day);
+          break;
+      case 1:
+          day = "Monday";
+          break;
+      case 2:
+          day = "Tuesday";
+          break;
+      case 3:
+          day = "Wednesday";
+          break;
+      case 4:
+          day = "Thursday";
+          break;
+      case 5:
+          day = "Friday";
+          break;
+      case  6:
+          day = "Saturday";
+  }
+
+
+
+
+
+  var cars = ["BMW", "Volvo", "Saab", "Ford"];
+  var i, len, text;
+  for (i = 0, len = cars.length, text = ""; i < len; i++) {
+      text += cars[i] + "<br>";
+  }
+  console.log(text);
+
+  var person = {fname:"John",
+      lname:"Doe",
+      age:25
+
+  };
+
+  var text2 = "";
+  var x2;
+  for (x2 in person) {//of for value
+      text2 += person[x2];//x2 proparty name
+      console.log(text2);
+
+  }
+
+
+</script>
+
+</body>
+</html>

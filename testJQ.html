@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The jQuery Example</title>
+    <script type = "text/javascript"
+            src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+    </script>
+
+
+    <script type = "text/javascript" src = "testJQ.js"></script>
+
+
+</head>
+
+<body>
+
+<div id = "mydiv">
+    Click on this to see a dialogue box.
+</div>
+
+
+<h2  >Finding HTML Elements by Id</h2>
+<p id="id04">Hello id04!</p>
+<p id="id01">Hello World!</p>
+<p id="id02">Hello Sweden!</p>
+
+<p id="demo0">demo0</p>
+
+<p id="demo">demo1</p>
+<p id="demo2">demo2</p>
+<p id="demo3">demo3</p>
+<p id="demo4">demo3</p>
+
+<p id="id03" class="Japan">Hello Japan!</p>
+<script>
+    $(document).ready(function() {
+        var myElements = $("#id01");//jQuery
+        $("#demo0").text("The text from the id01 paragraph is: " + myElements[0].innerHTML);
+
+
+        var myElement = document.getElementById("id02");//html
+        document.getElementById("demo").innerHTML = "The text from the id02 paragraph is: " + myElement.innerHTML;
+
+        var myElementst = document.getElementsByTagName("p");//tag name
+        document.getElementById("demo2").innerHTML = "The text in the third paragraph is: " + myElementst[2].innerHTML;
+        var myEle2 = $(".Japan");//class name
+        document.getElementById("demo3").innerHTML = "by class name " + myElementst[3].innerHTML;
+
+        //setting text
+        var myEle = $("p.Japan");//class name
+        document.getElementById("demo4").innerHTML = "by inner html " ;
+        document.getElementById("demo4"). textContent= "bytextcontent" ;
+
+        myEle.text(" hiiiiiiiiiiiiiiJapaaan");//jquery
+
+
+
+        var te=$("#demo4");
+        $("#demo0").text(te);
+        $("#demo0").html(te);
+
+
+
+     $("#id04").hide() ;
+
+
+    //   document.getElementById("id04").style.display = "none";
+
+
+    });
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
